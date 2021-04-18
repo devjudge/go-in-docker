@@ -14,8 +14,9 @@ PROJECT START STEPS:
 
 
     Steps:
-    1. To apply migrations:
-        goose -dir db/migration db_type "user:password@host:port/database_name?multiStatements=true&parseTime=true" up
+    1. To apply migrations, do the following:
+        1.a. Go to the project root directory.
+        1.b. goose -dir db/migration db_type "user:password@host:port/database_name?multiStatements=true&parseTime=true" up
     2. To run this application, do the following:
         2.a. Go to the project root directory.
         2.b. Run the following commands to build the app:
