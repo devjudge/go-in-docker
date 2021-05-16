@@ -4,16 +4,6 @@ RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/ba
 RUN chmod 775 ./pre-build.sh
 RUN sh pre-build.sh
 
-# RUN curl -L https://packagecloud.io/golang-migrate/migrate/gpgkey | apt-key add -
-
-# RUN apt-get update && apt-get install -y lsb-release && apt-get clean all
-
-# RUN echo "deb https://packagecloud.io/golang-migrate/migrate/ubuntu/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/migrate.list
-
-# RUN apt-get update
-
-# RUN apt-get install -y migrate
-
 RUN curl -s https://packagecloud.io/install/repositories/golang-migrate/migrate/script.deb.sh | bash
 
 RUN apt-get update
