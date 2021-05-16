@@ -25,5 +25,5 @@ EXPOSE 8080
 RUN go build -o main . 
 
 RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/golang/run-2.sh
-RUN chmod 0755 ./run-2.sh
+RUN chmod 755 ./run-2.sh
 CMD sh run-2.sh
