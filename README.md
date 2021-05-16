@@ -9,14 +9,17 @@ PROJECT START STEPS:
 
     Pre-requisites:
     1. Install need go version 1.1 to be installed in your system.
-    2. Keep all the migrations inside the db/migration folder (check the folder for example migrations)
-    3. goose to be installed to apply any migrations (if any, follow the version format, get goose using command - `go get -u github.com/pressly/goose/cmd/goose`)
+    2. Keep all the migrations inside the db/migration-goose or db/migration-migrate folder (check the respective folder and file name format for example migrations)
+    3. goose/golang-migrate to be installed to apply any migrations
 
 
     Steps:
-    1. To apply migrations, do the following:
+    1. To apply migrations via goose, do the following:
         1.a. Go to the project root directory.
-        1.b. goose -dir db/migration db_type "user:password@host:port/database_name?multiStatements=true&parseTime=true" up
+        1.b. Run the command `goose -dir db/migration-goose db_type "user:password@host:port/database_name?query" up` (Change the parameters as per your specification)
+    2. To apply migrations via migrate, do the following:
+        2.a. Go to the project root directory.
+        2.b. Run the command `migrate -path db/migration-migrate -database "db_type://user:password@host:port/database_name?query" -verbose up` (Change the parameters as per your specification)
     2. To run this application, do the following:
         2.a. Go to the project root directory.
         2.b. Run the following commands to build the app:
